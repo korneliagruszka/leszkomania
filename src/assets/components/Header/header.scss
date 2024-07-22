@@ -1,36 +1,41 @@
-//przykładowe style
+@import 'src/style/colors.scss';
 
 .header {
-    background-color: #f8f9fa;
-    padding: 20px;
-    text-align: center;
-  
-    h1 {
-      margin: 0;
-      font-size: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-mint-cream;
+  padding: 30px;
+
+  h1 {
+    margin: 0;
+    font-size: 50px;
+    color: $color-dark-gray;
+
+    span {
+      color: $color-cadet-gray;
     }
-  
-    nav {
-      margin-top: 10px;
-  
-      ul {
-        list-style-type: none;
-        padding: 0;
-  
-        li {
-          display: inline;
-          margin: 0 15px;
-  
-          a {
-            text-decoration: none;
-            color: #007bff;
-  
-            &:hover {
-              text-decoration: underline;
-            }
+  }
+
+  nav {
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        display: inline;
+        margin: 0 15px;
+
+        a {
+          text-decoration: none;
+          color: #83a4a9;
+
+          &:hover {
+            text-decoration: underline;
           }
         }
       }
     }
   }
-  
+}
