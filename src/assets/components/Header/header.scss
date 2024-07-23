@@ -6,6 +6,8 @@
   align-items: center;
   background-color: $color-mint-cream;
   padding: 30px;
+  border-bottom: 2px solid $color-cadet-gray;
+  opacity: 1;
 
   h1 {
     margin: 0;
@@ -29,10 +31,11 @@
 
         a {
           text-decoration: none;
-          color: #83a4a9;
+          color: $color-cadet-gray;
+          font-size: 18px;
 
           &:hover {
-            text-decoration: underline;
+            color: $color-dark-gray;
           }
         }
       }
