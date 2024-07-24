@@ -28,6 +28,7 @@
       li {
         display: inline;
         margin: 0 15px;
+        position: relative;
 
         a {
           text-decoration: none;
@@ -36,6 +37,39 @@
 
           &:hover {
             color: $color-dark-gray;
+          }
+        }
+
+        &.dropdown {
+          .dropdown_menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: $color-mint-cream;
+            box-shadow: 0 8px 16px $color-gray;
+            list-style: none;
+            padding: 0;
+            margin-top: 5px;
+            min-width: 150px;
+
+            li {
+              a {
+                display: block;
+                padding: 5px 15px;
+                color: $color-cadet-gray;
+                white-space: nowrap;
+
+                &:hover {
+                  background-color: $color-cadet-gray;
+                  color: $color-mint-cream;
+                }
+              }
+            }
+          }
+
+          &:hover .dropdown_menu {
+            display: block;
           }
         }
       }
