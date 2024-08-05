@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './header.scss';
 import AboutMe from '../AboutMe/aboutMe';
 import Products from '../Products/products';
@@ -12,17 +12,18 @@ const Header: React.FC = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  const renderView = () => {
-    switch (currentView) {
-      case 'about_me':
-        return <AboutMe />;
-      case 'products':
-        return <Products />;
-      case 'contact':
-        return <Contact />;
-      default:
-        return <AboutMe />;
+  useEffect(() => {
+    if (currentView !== 'products') {
+      const section = document.getElementById(currentView);
+      section?.scrollIntoView({ behavior: 'smooth' });
     }
+  }, [currentView]);
+
+  const renderView = () => {
+    if (currentView === 'products') {
+      return <Products />;
+    }
+    return null;
   };
 
   return (
@@ -32,7 +33,7 @@ const Header: React.FC = () => {
         <nav>
           <ul className="navigation">
             <li><a href="#about_me" onClick={() => setCurrentView('about_me')}>O mnie</a></li>
-            <li 
+            <li
               className="dropdown"
               onMouseEnter={toggleDropdown}
               onMouseLeave={toggleDropdown}
@@ -52,10 +53,15 @@ const Header: React.FC = () => {
       </header>
       <main>
         {renderView()}
+        <section id="about_me">
+          <AboutMe />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
       </main>
     </>
   );
 };
 
 export default Header;
-
