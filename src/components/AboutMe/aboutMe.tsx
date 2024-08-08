@@ -6,6 +6,7 @@ const AboutMe: React.FC = () => {
     <div>
       <h2>O mnie</h2>
       <p>To jest sekcja "O mnie".</p>
+      
     </div>
   );
 };
