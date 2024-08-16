@@ -13,18 +13,9 @@ const Header: React.FC = () => {
   };
 
   useEffect(() => {
-    if (currentView !== 'products') {
-      const section = document.getElementById(currentView);
-      section?.scrollIntoView({ behavior: 'smooth' });
-    }
+    const section = document.getElementById(currentView);
+    section?.scrollIntoView({ behavior: 'smooth' });
   }, [currentView]);
-
-  const renderView = () => {
-    if (currentView === 'products') {
-      return <Products />;
-    }
-    return null;
-  };
 
   return (
     <>
@@ -52,9 +43,11 @@ const Header: React.FC = () => {
         </nav>
       </header>
       <main>
-        {renderView()}
         <section id="about_me">
           <AboutMe />
+        </section>
+        <section id="products">
+          <Products />
         </section>
         <section id="contact">
           <Contact />
