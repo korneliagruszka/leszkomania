@@ -1,5 +1,5 @@
 import React from 'react';
-import './handicarft.scss';
+import './handicraft.scss';
 
 const Handicraft: React.FC = () => {
     return (
