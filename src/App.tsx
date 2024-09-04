@@ -1,13 +1,50 @@
 import './App.scss';
 import Header from './components/Header/header';
+import Images from './components/Images/images';
+import Handicraft from './components/Handicraft/handicraft';
+import Renovations from './components/Renovations/renovations';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import AboutMe from './components/AboutMe/aboutMe';
+import Products from './components/Products/products';
+import Contact from './components/Contact/contact';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Header />
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <header className="App_header">
+          <Header />
+        </header>
+        <main>
+          <Routes>
+            
+            <Route
+              path="/"
+              element={
+                <>
+                  <section id="about_me">
+                    <AboutMe />
+                  </section>
+                  <section id="products">
+                    <Products />
+                  </section>
+                </>
+              }
+            />
+            
+            <Route path="/pictures" element={<Images />} />
+            <Route path="/handicraft" element={<Handicraft />} />
+            <Route path="/renovations" element={<Renovations />} />
+          </Routes>
+        </main>
+        
+        <footer>
+          <section id="contact">
+            <Contact />
+          </section>
+        </footer>
+      </div>
+    </Router>
   );
 }
 

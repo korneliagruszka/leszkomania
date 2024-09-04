@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './header.scss';
-import AboutMe from '../AboutMe/aboutMe';
-import Products from '../Products/products';
-import Contact from '../Contact/contact';
 
 const Header: React.FC = () => {
   const [currentView, setCurrentView] = useState('about_me');
@@ -42,17 +39,6 @@ const Header: React.FC = () => {
           </ul>
         </nav>
       </header>
-      <main>
-        <section id="about_me">
-          <AboutMe />
-        </section>
-        <section id="products">
-          <Products />
-        </section>
-        <section id="contact">
-          <Contact />
-        </section>
-      </main>
     </>
   );
 };
