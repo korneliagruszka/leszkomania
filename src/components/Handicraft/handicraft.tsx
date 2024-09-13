@@ -3,9 +3,10 @@ import './handicraft.scss';
 
 const Handicraft: React.FC = () => {
     return (
-      <div>
-        <h2>Rękodzieło</h2>
-        <p>To jest sekcja "Rękodzieło".</p>
+      <div className='handicraft_container'>
+        <h2 className='handicraft_header'>Rękodzieło</h2>
+        <div className='handicraft_text'>
+        <p>To jest sekcja "Rękodzieło".</p></div>
       </div>
     );
   };
