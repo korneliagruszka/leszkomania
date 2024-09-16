@@ -3,9 +3,10 @@ import './renovations.scss';
 
 const Renovations: React.FC = () => {
     return (
-      <div>
-        <h2>Renowacje</h2>
-        <p>To jest sekcja "Renowacje".</p>
+      <div className='renovations_container'>
+        <h2 className='renovations_header'>Renowacje</h2>
+        <div className='renovations_text'>
+        <p>To jest sekcja "Renowacje".</p></div>
       </div>
     );
   };
