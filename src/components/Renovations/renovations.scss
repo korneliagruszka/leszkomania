@@ -1,1 +1,27 @@
 @import 'src/style/colors.scss';
+
+.renovations_header {
+    margin: 50px 0;
+    text-align: center;
+    font-size: 24px;
+    color: $color-dark-gray;
+}
+
+.renovations_text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: $color-white;
+    padding: 10px;
+    background-color: $color-cadet-gray;
+    border-top: $color-cadet-gray;
+    margin-bottom: -36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+        p {
+            width: 495px;
+            text-align: center;
+        }
+}
