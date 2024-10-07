@@ -1,4 +1,6 @@
 import './App.scss';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import Header from './components/Header/header';
 import Images from './components/Images/images';
 import Handicraft from './components/Handicraft/handicraft';

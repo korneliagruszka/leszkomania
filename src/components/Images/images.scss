@@ -26,6 +26,19 @@
         }
 }
 
-.images_portfolio img {
-    width: 200px;
- }
+.images_container {
+    text-align: center;
+  }
+  
+  .images_portfolio {
+    width: 80%;
+    margin: 0 auto;
+  
+    img {
+      width: 100%;
+      max-height: 700px;
+      object-fit: cover;
+      margin-top: 50px;
+    }
+  }
+  
