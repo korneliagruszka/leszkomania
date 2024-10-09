@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Slider from "react-slick";
 import './images.scss';
 import Abstraction from '../../assets/image_abstration.jpg';
@@ -17,6 +17,25 @@ import Red from '../../assets/image_red.jpg';
 
 const Images: React.FC = () => {
 
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
+    const [selectedDescription, setSelectedDescription] = useState<string | null>(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+  
+    const images = [
+      { src: Abstraction, description: 'Opis dla obrazu 1' },
+      { src: Abstraction_2, description: 'Opis dla obrazu 2' },
+      { src: Abstraction_3, description: 'Opis dla obrazu 3' },
+      { src: Abstraction_4, description: 'Opis dla obrazu 4' },
+      { src: Abstraction_5, description: 'Opis dla obrazu 5' },
+      { src: Abstraction_6, description: 'Opis dla obrazu 6' },
+      { src: Birds, description: 'Opis dla obrazu 7' },
+      { src: Birds_2, description: 'Opis dla obrazu 8' },
+      { src: Face, description: 'Opis dla obrazu 9' },
+      { src: Flowers, description: 'Opis dla obrazu 10' },
+      { src: Green, description: 'Opis dla obrazu 11' },
+      { src: Red, description: 'Opis dla obrazu 12' }
+    ];
+
   const settings = {
     dots: true, // Punkty nawigacyjne
     infinite: true, // Nieskończone przewijanie
@@ -27,6 +46,18 @@ const Images: React.FC = () => {
     autoplaySpeed: 3000, // Prędkość automatycznego przesuwania
   };
 
+  const openModal = (image: string, description: string) => {
+    setSelectedImage(image);
+    setSelectedDescription(description);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedImage(null);
+    setSelectedDescription(null);
+  };
+
   return (
     <div className='images_container'>
       <h2 className='images_header'>Autorskie obrazy</h2>
@@ -35,44 +66,24 @@ const Images: React.FC = () => {
       </div>
       <div className='images_portfolio'>
         <Slider {...settings}>
-          <div>
-            <img src={Abstraction} alt="Abstraction" />
-          </div>
-          <div>
-            <img src={Abstraction_2} alt="Abstraction 2" />
-          </div>
-          <div>
-            <img src={Abstraction_3} alt="Abstraction 3" />
-          </div>
-          <div>
-            <img src={Abstraction_4} alt="Abstraction 4" />
-          </div>
-          <div>
-            <img src={Abstraction_5} alt="Abstraction 5" />
-          </div>
-          <div>
-            <img src={Abstraction_6} alt="Abstraction 6" />
-          </div>
-          <div>
-            <img src={Birds} alt="Birds" />
-          </div>
-          <div>
-            <img src={Birds_2} alt="Birds_2" />
-          </div>
-          <div>
-            <img src={Face} alt="Face" />
-          </div>
-          <div>
-            <img src={Flowers} alt="Flowers" />
-          </div>
-          <div>
-            <img src={Green} alt="Green" />
-          </div>
-          <div>
-            <img src={Red} alt="Red" />
-          </div>
+          {images.map((image, index) => (
+            <div key={index} onClick={() => openModal(image.src, image.description)}>
+              <img src={image.src} alt={`Obraz ${index + 1}`} />
+            </div>
+          ))}
         </Slider>
       </div>
+
+      {/* Modal */}
+      {isModalOpen && (
+        <div className="modal" onClick={closeModal}>
+          <div className="modal_content" onClick={(e) => e.stopPropagation()}>
+            <span className="modal_close" onClick={closeModal}>&times;</span>
+            <img src={selectedImage!} alt="Powiększony obraz" className="modal_image" />
+            <p className="modal_description">{selectedDescription}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
   };
