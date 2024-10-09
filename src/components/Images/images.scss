@@ -33,12 +33,62 @@
   .images_portfolio {
     width: 80%;
     margin: 0 auto;
+
+    .slick-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      min-height: 600px;
+    }
   
     img {
-      width: 100%;
-      max-height: 700px;
-      object-fit: cover;
       margin-top: 50px;
+      max-width: 700px;      
+      max-height: 500px;    
+      object-fit: contain;
     }
   }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
   
+  .modal_content {
+    position: relative;
+    background: white;
+    padding: 20px;
+    max-width: 80%;
+    max-height: 80%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+  }
+  
+  .modal_image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .modal_description {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  
+  .modal_close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: black;
+  }  
