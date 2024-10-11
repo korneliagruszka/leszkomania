@@ -14,6 +14,33 @@ import Flowers from '../../assets/image_flowers.jpg';
 import Green from '../../assets/image_green.jpg';
 import Red from '../../assets/image_red.jpg';
 
+// Komponent strzałki lewej
+const PreviousArrow = (props: any) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={`${className} custom_arrow_left`} 
+      style={{ ...style, display: "block" }}      
+      onClick={onClick}
+    >
+      &#9664;  
+    </div>
+  );
+};
+
+// Komponent strzałki prawej
+const NextArrow = (props: any) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={`${className} custom_arrow_right`}  
+      style={{ ...style, display: "block" }}       
+      onClick={onClick}
+    >
+      &#9654;  
+    </div>
+  );
+};
 
 const Images: React.FC = () => {
 
@@ -37,13 +64,15 @@ const Images: React.FC = () => {
     ];
 
   const settings = {
-    dots: true, // Punkty nawigacyjne
-    infinite: true, // Nieskończone przewijanie
-    speed: 500, // Szybkość animacji
-    slidesToShow: 1, // Liczba widocznych slajdów
-    slidesToScroll: 1, // Liczba przesuwanych slajdów
-    autoplay: true, // Automatyczne przesuwanie
-    autoplaySpeed: 3000, // Prędkość automatycznego przesuwania
+    dots: true, 
+    infinite: true, 
+    speed: 500, 
+    slidesToShow: 1, 
+    slidesToScroll: 1, 
+    autoplay: true, 
+    autoplaySpeed: 3000, 
+    nextArrow: <NextArrow />, 
+    prevArrow: <PreviousArrow />
   };
 
   const openModal = (image: string, description: string) => {
