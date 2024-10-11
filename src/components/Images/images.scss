@@ -65,7 +65,7 @@
   
   .modal_content {
     position: relative;
-    background: white;
+    background: $color-white;
     padding: 20px;
     max-width: 80%;
     max-height: 80%;
@@ -90,5 +90,31 @@
     right: 15px;
     font-size: 2rem;
     cursor: pointer;
-    color: black;
+    color: $color-black;
   }  
+
+  .custom_arrow_left,
+.custom_arrow_right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  background-color: $color-cadet-gray;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;  
+}
+
+.custom_arrow_left {
+  left: 200px;  
+}
+
+.custom_arrow_right {
+  right: 200px;  
+}
+
+.custom_arrow_left:hover,
+.custom_arrow_right:hover {
+  background-color: $color-dark-gray;
+}
