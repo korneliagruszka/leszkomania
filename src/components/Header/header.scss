@@ -9,11 +9,15 @@
   border-bottom: 2px solid $color-cadet-gray;
   opacity: 1;
 
+  a {
+    text-decoration: none;
+    color: $color-dark-gray;
+
+  }
   h1 {
     margin: 0;
     font-size: 50px;
-    color: $color-dark-gray;
-
+    
     span {
       color: $color-cadet-gray;
     }

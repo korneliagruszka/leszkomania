@@ -13,14 +13,19 @@ const Header: React.FC = () => {
     const section = document.getElementById(currentView);
     section?.scrollIntoView({ behavior: 'smooth' });
   }, [currentView]);
+  
 
   return (
     <>
       <header className="header">
-        <h1>Leszko<span>mania</span></h1>
+      <h1>
+        <a href="/" className="header_text">
+        Leszko<span>mania</span>
+        </a>
+      </h1>
         <nav>
           <ul className="navigation">
-            <li><a href="#about_me" onClick={() => setCurrentView('about_me')}>O mnie</a></li>
+            <li><a href="/" onClick={() => setCurrentView('about_me')}>O mnie</a></li>
             <li
               className="dropdown"
               onMouseEnter={toggleDropdown}
@@ -29,9 +34,9 @@ const Header: React.FC = () => {
               <a href="#products" onClick={() => setCurrentView('products')}>Moje prace</a>
               {isDropdownOpen && (
                 <ul className="dropdown_menu">
-                  <li><a href="#images" onClick={() => setCurrentView('products')}>Obrazy</a></li>
-                  <li><a href="#handicraft" onClick={() => setCurrentView('products')}>Rękodzieło</a></li>
-                  <li><a href="#renovations" onClick={() => setCurrentView('products')}>Renowacje</a></li>
+                  <li><a href="/pictures" onClick={() => setCurrentView('products')}>Obrazy</a></li>
+                  <li><a href="/handicraft" onClick={() => setCurrentView('products')}>Rękodzieło</a></li>
+                  <li><a href="/renovations" onClick={() => setCurrentView('products')}>Renowacje</a></li>
                 </ul>
               )}
             </li>
