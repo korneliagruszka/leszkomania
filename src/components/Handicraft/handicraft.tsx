@@ -6,7 +6,7 @@ const Handicraft: React.FC = () => {
       <div className='handicraft_container'>
         <h2 className='handicraft_header'>Rękodzieło</h2>
         <div className='handicraft_text'>
-        <p>To jest sekcja "Rękodzieło".</p></div>
+        <p>W tej sekcji znajdziesz skomponowane przeze mnie talerze ozdobne oraz zegary. Wykonuję również zdobienia przedmiotów na specjalne zamówienie klienta. Oto moje prace:</p></div>
       </div>
     );
   };
