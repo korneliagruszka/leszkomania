@@ -56,20 +56,10 @@
   
   .custom_arrow_left,
   .custom_arrow_right {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.5); // Tło strzałek
-    color: white;
+    background-color: $color-cadet-gray;
     padding: 15px;
     cursor: pointer;
     border-radius: 50%;
-    font-size: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s ease;
   }
   
   .custom_arrow_left {
@@ -82,6 +72,6 @@
   
   .custom_arrow_left:hover,
   .custom_arrow_right:hover {
-    background-color: rgba(0, 0, 0, 0.8);  // Zmiana koloru tła przy najechaniu
+    background-color: $color-dark-gray;
   }
   
