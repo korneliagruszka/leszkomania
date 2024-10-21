@@ -74,4 +74,20 @@
   .custom_arrow_right:hover {
     background-color: $color-dark-gray;
   }
-  
+
+.modal_image {
+    max-height: 60vh;
+    height: auto;
+}
+
+.modal_navigation {
+    display: flex;
+    align-items: center;
+}
+
+.modal_prev,
+.modal_next {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
