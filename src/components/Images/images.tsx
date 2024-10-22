@@ -8,7 +8,7 @@ import Abstraction_4 from '../../assets/image_abstraction_4.jpg';
 import Abstraction_5 from '../../assets/image_abstraction_5.jpg';
 import Abstraction_6 from '../../assets/image_abstraction_6.jpg';
 import Birds from '../../assets/image_birds.jpg';
-import Birds_2 from '../../assets/image_birds_2.jpg'
+import Birds_2 from '../../assets/image_birds_2.jpg';
 import Face from '../../assets/image_face.jpg';
 import Flowers from '../../assets/image_flowers.jpg';
 import Green from '../../assets/image_green.jpg';
@@ -44,8 +44,7 @@ const NextArrow = (props: any) => {
 
 const Images: React.FC = () => {
 
-    const [selectedImage, setSelectedImage] = useState<string | null>(null);
-    const [selectedDescription, setSelectedDescription] = useState<string | null>(null);
+    const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
   
     const images = [
@@ -75,16 +74,30 @@ const Images: React.FC = () => {
     prevArrow: <PreviousArrow />
   };
 
-  const openModal = (image: string, description: string) => {
-    setSelectedImage(image);
-    setSelectedDescription(description);
+  // Funkcja otwierająca modal na danym indeksie obrazu
+  const openModal = (index: number) => {
+    setSelectedImageIndex(index);
     setIsModalOpen(true);
   };
 
+  // Funkcja zamykająca modal
   const closeModal = () => {
     setIsModalOpen(false);
-    setSelectedImage(null);
-    setSelectedDescription(null);
+    setSelectedImageIndex(null);
+  };
+
+  // Funkcja obsługująca przejście do następnego obrazu
+  const handleNext = () => {
+    if (selectedImageIndex !== null) {
+      setSelectedImageIndex((selectedImageIndex + 1) % images.length);
+    }
+  };
+
+  // Funkcja obsługująca przejście do poprzedniego obrazu
+  const handlePrev = () => {
+    if (selectedImageIndex !== null) {
+      setSelectedImageIndex((selectedImageIndex - 1 + images.length) % images.length);
+    }
   };
 
   return (
@@ -96,7 +109,7 @@ const Images: React.FC = () => {
       <div className='images_portfolio'>
         <Slider {...settings}>
           {images.map((image, index) => (
-            <div key={index} onClick={() => openModal(image.src, image.description)}>
+            <div key={index} onClick={() => openModal(index)}>
               <img src={image.src} alt={`Obraz ${index + 1}`} />
             </div>
           ))}
@@ -104,17 +117,21 @@ const Images: React.FC = () => {
       </div>
 
       {/* Modal */}
-      {isModalOpen && (
+      {isModalOpen && selectedImageIndex !== null && (
         <div className="modal" onClick={closeModal}>
           <div className="modal_content" onClick={(e) => e.stopPropagation()}>
             <span className="modal_close" onClick={closeModal}>&times;</span>
-            <img src={selectedImage!} alt="Powiększony obraz" className="modal_image" />
-            <p className="modal_description">{selectedDescription}</p>
+            <div className="modal_navigation">
+              <span className="modal_prev" onClick={handlePrev}>&#9664;</span>
+              <img src={images[selectedImageIndex].src} alt="Powiększony obraz" className="modal_image" />
+              <span className="modal_next" onClick={handleNext}>&#9654;</span>
+            </div>
+            <p className="modal_description">{images[selectedImageIndex].description}</p>
           </div>
         </div>
       )}
     </div>
   );
-  };
-  
-  export default Images;
+};
+
+export default Images;

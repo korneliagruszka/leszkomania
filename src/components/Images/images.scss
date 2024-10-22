@@ -110,6 +110,13 @@
     color: $color-black;
   }  
 
+  .modal_navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
   .custom_arrow_left,
   .custom_arrow_right {
     background-color: $color-cadet-gray;
