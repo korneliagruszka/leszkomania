@@ -6,7 +6,7 @@ const Renovations: React.FC = () => {
       <div className='renovations_container'>
         <h2 className='renovations_header'>Renowacje</h2>
         <div className='renovations_text'>
-        <p>To jest sekcja "Renowacje".</p></div>
+        <p>W tej sekcji znajdziesz wykonane przeze mnie renowacje różnych przedmiotów. Jeśli posiadasz coś starego i chcesz mu nadać nowy wygląd wykonuje takie usługi na zamówienie. Moje dotychczasowe renowacje:</p></div>
       </div>
     );
   };
