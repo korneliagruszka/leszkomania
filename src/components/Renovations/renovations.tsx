@@ -2,6 +2,10 @@ import React from 'react';
 import './renovations.scss';
 import BeforeImageTableTop from '../../assets/renovation_table_top_before.jpg';
 import AfterImageTableTop from '../../assets/renovation_table_top_done.jpg';
+import BeforeTableDetails from '../../assets/renovation_table_detals.jpg';
+import AfterTableDetails from '../../assets/renovation_table_details_done.jpg';
+import BeforeTableLegs from '../../assets/renovation_table.jpg';
+import AfterTableLegs from '../../assets/renovation_table_done.jpg';
 
 const Renovations: React.FC = () => {
   const renovations = [
@@ -11,9 +15,14 @@ const Renovations: React.FC = () => {
       description: 'Blat stołu'
     },
     {
-      before: ,
-      after: ,
-      description: ''
+      before: BeforeTableDetails,
+      after: AfterTableDetails,
+      description: 'Detale stolika'
+    },
+    {
+      before: BeforeTableLegs,
+      after: AfterTableLegs,
+      description: 'Nogi stolika'
     },
     
   ];
