@@ -12,7 +12,7 @@ const Renovations: React.FC = () => {
     {
       before: BeforeImageTableTop,
       after: AfterImageTableTop,
-      description: 'Blat stołu'
+      description: 'Blat stolika'
     },
     {
       before: BeforeTableDetails,
