@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AboutMe from './components/AboutMe/aboutMe';
 import Products from './components/Products/products';
 import Contact from './components/Contact/contact';
+import Form from './components/Form/form';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
             <Route path="/handicraft" element={<Handicraft />} />
             <Route path="/renovations" element={<Renovations />} />
           </Routes>
+          <Form />
         </main>
         
         <footer>
