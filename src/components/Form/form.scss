@@ -1,28 +1,27 @@
-.form-container {
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin: 20px;
+@import '../../style/colors.scss';
+
+.form_container {
+    margin-top: 80px;
+    margin-left: 200px;
     padding: 20px;
     width: 300px;
-    background-color: #f9f9f9; /* Jasne tło */
-    border-radius: 8px; /* Zaokrąglenie rogów */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Delikatny cień */
+    background-color: $color-cadet-gray;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  .form-group {
+  .form_group {
     margin-bottom: 15px;
   }
   
-  .form-group label {
+  .form_group label {
     display: block;
-    font-weight: bold;
     margin-bottom: 5px;
-    color: #333; /* Kolor tekstu */
+    color: $color-white;
   }
   
-  .form-input, 
-  .form-textarea {
+  .form_input, 
+  .form_textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
@@ -31,29 +30,28 @@
     box-sizing: border-box;
   }
   
-  .form-input:focus, 
-  .form-textarea:focus {
-    border-color: #007bff; /* Niebieski kolor podczas focusa */
+  .form_input:focus, 
+  .form_textarea:focus {
+    border-color: $color-white;
     outline: none;
   }
   
-  .form-textarea {
-    height: 100px; /* Wysokość pola tekstowego */
-    resize: vertical; /* Możliwość zmiany rozmiaru tylko pionowo */
+  .form_textarea {
+    height: 100px;
+    resize: vertical; 
   }
   
-  .form-submit-button {
+  .form_submit_button {
     width: 100%;
     padding: 10px;
-    background-color: #007bff; /* Niebieski kolor */
-    color: white;
+    background-color: $color-dark-gray;
+    color: $color-white;
     border: none;
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
   }
   
-  .form-submit-button:hover {
-    background-color: #0056b3; /* Ciemniejszy niebieski podczas hover */
-  }
-  
+  .form_submit_button:hover {
+    background-color: $color-gray;
+  } 
