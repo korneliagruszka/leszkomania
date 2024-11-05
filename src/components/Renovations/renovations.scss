@@ -1,5 +1,9 @@
 @import 'src/style/colors.scss';
 
+.renovations_container {
+  border-bottom: 2px solid $color-cadet-gray;
+}
+
 .renovations_header {
     margin: 50px 0;
     text-align: center;
