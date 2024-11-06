@@ -7,7 +7,12 @@
   background-color: $color-mint-cream;
   padding: 30px;
   border-bottom: 2px solid $color-cadet-gray;
-  opacity: 1;
+  opacity: 0.8;
+  position: fixed;
+  z-index: 3;
+  width: 96%;
+  margin-bottom: 100px;
+  height: 80px;
 
   a {
     text-decoration: none;
