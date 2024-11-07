@@ -1,13 +1,25 @@
 @import '../../style/colors.scss';
 
+.form_image_container { 
+  display: flex;
+  align-items: flex-start; 
+  background-color: $color-mint-cream;
+}
+
 .form_container {
-    margin-top: 80px;
-    margin-left: 200px;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: -90px;
     padding: 20px;
-    width: 300px;
+    width: 500px;
     background-color: $color-cadet-gray;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .form_image { 
+    margin-left: 216px; 
+    width: 53%; 
   }
   
   .form_group {

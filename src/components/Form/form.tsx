@@ -1,5 +1,6 @@
 import './form.scss';
 import React, { FC, useState } from 'react';
+import myImage from '../../assets/pexels-maksgelatin-5605061.jpg';
 
 const Form: FC = () => {
   const [email, setEmail] = useState('');
@@ -14,6 +15,7 @@ const Form: FC = () => {
   };
 
   return (
+   <div className="form_image_container"> {/* Dodana linia */}
     <form onSubmit={handleSubmit} className="form_container">
       <div className="form_group">
         <label htmlFor="email">Email:</label>
@@ -44,6 +46,8 @@ const Form: FC = () => {
         Wyślij
       </button>
     </form>
+    <img src={myImage} alt="Description" className="form_image" />
+   </div>
   );
 };
 

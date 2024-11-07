@@ -47,13 +47,17 @@
       max-width: 100%;
       max-height: 400px;
       object-fit: contain;
-      margin: 0 auto;
+      margin: 70px auto;
     }
   
     .handicraft_description {
       margin-top: 10px;
       font-size: 1.1rem;
     }
+  }
+
+  .slick-dots {
+    margin-bottom: 40px;
   }
   
   .custom_arrow_left,
