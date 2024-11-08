@@ -1,7 +1,6 @@
 @import 'src/style/colors.scss';
 
 .renovations_container {
-  border-bottom: 2px solid $color-cadet-gray;
   padding-top: 140px;
 }
 
@@ -18,7 +17,8 @@
     color: $color-white;
     padding: 10px;
     background-color: $color-cadet-gray;
-    border-top: $color-cadet-gray;
+    border-top: 2px solid $color-dark-gray;
+    border-bottom: 2px solid $color-dark-gray;
     margin-bottom: -36px;
     display: flex;
     justify-content: center;
@@ -45,6 +45,7 @@
     background-color: $color-cadet-gray;
     margin-top: 30px;
     padding: 20px;
+    border: 2px solid $color-dark-gray;
   }
   
   .renovation_images {

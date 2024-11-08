@@ -3,7 +3,8 @@
 .form_image_container { 
   display: flex;
   align-items: flex-start; 
-  background-color: $color-mint-cream;
+  background-color: $color-white;
+  border-top: 2px solid $color-dark-gray;
 }
 
 .form_container {
@@ -15,6 +16,7 @@
     background-color: $color-cadet-gray;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid $color-dark-gray;
   }
 
   .form_image { 
