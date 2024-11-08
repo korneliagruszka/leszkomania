@@ -5,7 +5,8 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px;
-    border-top: 2px solid $color-cadet-gray;
+    border-top: 2px solid $color-dark-gray;
+    background-color: $color-cadet-gray;
   }
   
   .contact_container h2 {
@@ -14,7 +15,7 @@
     color: $color-dark-gray;
 
     span {
-      color: $color-cadet-gray;
+      color: $color-white;
     }
   }
   
@@ -23,7 +24,7 @@
     max-width: 60%;
     text-align: right;
     font-size: 18px;
-    color: $color-dark-gray;
+    color: $color-white;
     margin-top: 30px;
     margin-right: 50px;
     margin-bottom: 30px;
