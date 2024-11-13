@@ -6,16 +6,43 @@ const Form: FC = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   console.log('Email:', email);
+  //   console.log('Message:', message);
+  //   setEmail('');
+  //   setMessage('');
+  // };
+
+  // Zmodyfikowana funkcja handleSubmit
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Email:', email);
-    console.log('Message:', message);
-    setEmail('');
-    setMessage('');
+
+    try {
+      // Wysyłanie żądania POST do backendu
+      const response = await fetch('http://localhost:5000/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, message }),
+      });
+
+      if (response.ok) {
+        alert('Wiadomość wysłana pomyślnie!');
+        setEmail(''); // Czyszczenie pól formularza
+        setMessage('');
+      } else {
+        alert('Wystąpił błąd podczas wysyłania wiadomości.');
+      }
+    } catch (error) {
+      console.error('Błąd:', error);
+      alert('Wystąpił błąd. Spróbuj ponownie.');
+    }
   };
 
   return (
-   <div className="form_image_container"> {/* Dodana linia */}
+   <div className="form_image_container">
     <form onSubmit={handleSubmit} className="form_container">
       <div className="form_group">
         <label htmlFor="email">Email:</label>
@@ -52,4 +79,3 @@ const Form: FC = () => {
 };
 
 export default Form;
-
