@@ -5,16 +5,7 @@ import myImage from '../../assets/pexels-maksgelatin-5605061.jpg';
 const Form: FC = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   console.log('Email:', email);
-  //   console.log('Message:', message);
-  //   setEmail('');
-  //   setMessage('');
-  // };
-
-  // Zmodyfikowana funkcja handleSubmit
+  
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
