@@ -1,8 +1,8 @@
 require('dotenv').config();
 
 console.log(process.env.EMAIL_USER, process.env.EMAIL_PASS);
-console.log('EMAIL_USER:', process.env.EMAIL_USER); // Powinno wyświetlić twój e-mail
-console.log('EMAIL_PASS:', process.env.EMAIL_PASS); // Powinno wyświetlić twoje hasło
+console.log('EMAIL_USER:', process.env.EMAIL_USER); 
+console.log('EMAIL_PASS:', process.env.EMAIL_PASS); 
 
 const express = require('express');
 const nodemailer = require('nodemailer');
