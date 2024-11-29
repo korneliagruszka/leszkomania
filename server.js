@@ -43,7 +43,8 @@ app.post('/send-email', (req, res) => {
   
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      console.error('Błąd podczas wysyłania e-maila:', error); // Zaloguj szczegóły błędu
+      console.error('Błąd podczas wysyłania e-maila:', error);
+      
       return res.status(500).send(error.toString());
     }
     console.log('Wiadomość wysłana:', info.response);
