@@ -42,9 +42,6 @@ app.get('/', (req, res) => {
 app.post('/send-email', (req, res) => {
   const { email, message } = req.body;
 
-  // Logowanie danych otrzymanych z frontendu
-  console.log('Otrzymane dane:', { email, message });
-
   // Ustawienia wiadomości e-mail
   const mailOptions = {
     from: `"Formularz kontaktowy" <${process.env.EMAIL_USER}>`,
