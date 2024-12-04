@@ -11,10 +11,6 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cors());
 
-// Test logowania zmiennych środowiskowych
-console.log('EMAIL_USER:', process.env.EMAIL_USER);
-console.log('EMAIL_PASS:', process.env.EMAIL_PASS);
-
 // Ustawienie transportera Nodemailer dla Gmaila
 const transporter = nodemailer.createTransport({
   service: 'gmail', 
