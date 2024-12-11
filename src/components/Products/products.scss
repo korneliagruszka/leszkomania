@@ -4,7 +4,7 @@
     margin: 50px 0;
     text-align: center;
     font-size: 36px;
-    color: $color-dark-gray;
+    color: $color-cadet-gray;
     letter-spacing: 2px;
 
     &::after {
@@ -12,7 +12,7 @@
       display: block;
       width: 100px;
       height: 4px;
-      background-color: $color-dark-gray; 
+      background-color: $color-cadet-gray; 
       margin: 10px auto 0;
       border-radius: 2px;
     }
@@ -22,7 +22,7 @@
     display: flex;
     gap: 30px;
     padding: 20px;
-    background-color: $color-dark-gray;
+    background-color: $color-cadet-gray;
   }
   
   
@@ -77,7 +77,7 @@
       transition: color 0.3s ease;
   
       &:hover {
-        color: $color-cadet-gray;
+        color: $color-dark-gray;
       }
     }
   }
