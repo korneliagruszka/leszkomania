@@ -19,7 +19,7 @@ const PreviousArrow = (props: any) => {
   const { className, style, onClick } = props;
   return (
     <div
-      className={`${className} custom_arrow_left`} 
+      className={`${className} custom_arrow_left slick-prev`} 
       style={{ ...style, display: "block" }}      
       onClick={onClick}
     >
