@@ -143,13 +143,5 @@
 }
 
 .custom_arrow_left {
-  left: 200px;  
-}
-
-.custom_arrow_right {
-  right: 200px;  
-}
-
-.custom_arrow_left:hover, .custom_arrow_right:hover {
-  background-color: $color-dark-gray;
+  z-index: 10;
 }
