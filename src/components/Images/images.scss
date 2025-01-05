@@ -22,7 +22,7 @@
     line-height: 1.6;
     color: $color-white;
     padding: 10px;
-    background-color: $color-cadet-gray;
+    background: linear-gradient(135deg, $color-cadet-gray, $color-dark-gray);
     border-top: 2px solid $color-dark-gray;
     border-bottom: 2px solid $color-dark-gray;
     margin-bottom: -36px;
@@ -40,7 +40,7 @@
 .images_container {
     text-align: center;
     padding-top: 140px;
-    background-color: $color-dark-gray;
+    background: radial-gradient(circle, $color-dark-gray, $color-black);
   }
   
   .images_portfolio {
@@ -132,14 +132,6 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-}
-
-  .custom_arrow_left,
-  .custom_arrow_right {
-    background-color: $color-cadet-gray;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
 }
 
 .custom_arrow_left {

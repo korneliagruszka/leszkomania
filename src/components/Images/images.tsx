@@ -16,11 +16,10 @@ import Red from '../../assets/image_red.jpg';
 
 // Komponent strzałki lewej
 const PreviousArrow = (props: any) => {
-  const { className, style, onClick } = props;
+  const { className, onClick } = props;
   return (
     <div
-      className={`${className} custom_arrow_left slick-prev`} 
-      style={{ ...style, display: "block" }}      
+      className={`${className} custom_arrow custom_arrow_left`}
       onClick={onClick}
     >
       &#9664;  
@@ -30,11 +29,10 @@ const PreviousArrow = (props: any) => {
 
 // Komponent strzałki prawej
 const NextArrow = (props: any) => {
-  const { className, style, onClick } = props;
+  const { className, onClick } = props;
   return (
     <div
-      className={`${className} custom_arrow_right`}  
-      style={{ ...style, display: "block" }}       
+      className={`${className} custom_arrow custom_arrow_right`}
       onClick={onClick}
     >
       &#9654;  
@@ -72,6 +70,7 @@ const Images: React.FC = () => {
     autoplaySpeed: 3000, 
     nextArrow: <NextArrow />, 
     prevArrow: <PreviousArrow />
+    //pauseOnHover: true,
   };
 
   // Funkcja otwierająca modal na danym indeksie obrazu
