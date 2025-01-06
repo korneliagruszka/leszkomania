@@ -4,15 +4,16 @@
     margin: 50px 0;
     text-align: center;
     font-size: 36px;
-    color: $color-cadet-gray;
+    color: $color-dark-gray;
     letter-spacing: 2px;
+    margin: 10px;
 
     &::after {
       content: '';
       display: block;
       width: 100px;
       height: 4px;
-      background-color: $color-cadet-gray; 
+      background-color: $color-dark-gray; 
       margin: 10px auto 0;
       border-radius: 2px;
     }
@@ -22,7 +23,7 @@
     display: flex;
     gap: 30px;
     padding: 20px;
-    background-color: $color-cadet-gray;
+    background: radial-gradient(circle, $color-dark-gray, $color-dark-blue);
   }
   
   
