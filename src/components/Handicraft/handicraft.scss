@@ -4,7 +4,17 @@
     margin: 50px 0;
     text-align: center;
     font-size: 24px;
-    color: $color-dark-gray;
+    color: $color-white;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 100px;
+      height: 4px;
+      background-color: $color-white;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
 }
 
 .handicraft_text {
@@ -12,9 +22,7 @@
     line-height: 1.6;
     color: $color-white;
     padding: 10px;
-    background-color: $color-cadet-gray;
-    border-top: 2px solid $color-dark-gray;
-    border-bottom: 2px solid $color-dark-gray;
+    background: linear-gradient(135deg, $color-cadet-gray, $color-dark-gray);
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
@@ -32,6 +40,7 @@
     margin: 0 auto;
     text-align: center;
     padding-top: 140px;
+    background: radial-gradient(circle, $color-dark-gray, $color-black);
   }
   
   .handicraft_portfolio {
