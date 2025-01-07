@@ -2,13 +2,24 @@
 
 .renovations_container {
   padding-top: 140px;
+  background: radial-gradient(circle, $color-dark-gray, $color-black);
 }
 
 .renovations_header {
     margin: 50px 0;
     text-align: center;
-    font-size: 24px;
-    color: $color-dark-gray;
+    font-size: 36px;
+    color: $color-white;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 100px;
+      height: 4px;
+      background-color: $color-white;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
 }
 
 .renovations_text {
@@ -16,9 +27,6 @@
     line-height: 1.6;
     color: $color-white;
     padding: 10px;
-    background-color: $color-cadet-gray;
-    border-top: 2px solid $color-dark-gray;
-    border-bottom: 2px solid $color-dark-gray;
     margin-bottom: -36px;
     display: flex;
     justify-content: center;
@@ -42,10 +50,8 @@
   .renovation_item {
     text-align: center;
     max-width: 600px;
-    background-color: $color-cadet-gray;
     margin-top: 30px;
     padding: 20px;
-    border: 2px solid $color-dark-gray;
   }
   
   .renovation_images {
