@@ -46,18 +46,18 @@ const Images: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
   
     const images = [
-      { src: Abstraction, description: 'Opis dla obrazu 1' },
-      { src: Abstraction_2, description: 'Opis dla obrazu 2' },
-      { src: Abstraction_3, description: 'Opis dla obrazu 3' },
-      { src: Abstraction_4, description: 'Opis dla obrazu 4' },
-      { src: Abstraction_5, description: 'Opis dla obrazu 5' },
-      { src: Abstraction_6, description: 'Opis dla obrazu 6' },
-      { src: Birds, description: 'Opis dla obrazu 7' },
-      { src: Birds_2, description: 'Opis dla obrazu 8' },
-      { src: Face, description: 'Opis dla obrazu 9' },
-      { src: Flowers, description: 'Opis dla obrazu 10' },
-      { src: Green, description: 'Opis dla obrazu 11' },
-      { src: Red, description: 'Opis dla obrazu 12' }
+      { src: Abstraction, description: '"Apokalipsa"' },
+      { src: Abstraction_2, description: '"Czerwie"' },
+      { src: Abstraction_3, description: '"Pustynia"' },
+      { src: Abstraction_4, description: '"Modernizm"' },
+      { src: Abstraction_5, description: '"Biel"' },
+      { src: Abstraction_6, description: '"Drzewo"' },
+      { src: Birds, description: '"Pawie"' },
+      { src: Birds_2, description: '"Paw"' },
+      { src: Face, description: '"Twarz"' },
+      { src: Flowers, description: '"Kwiaty"' },
+      { src: Green, description: '"Wiosna"' },
+      { src: Red, description: '"Jesień"' }
     ];
 
   const settings = {
