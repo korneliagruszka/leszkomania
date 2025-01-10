@@ -1,9 +1,15 @@
 @import 'src/style/colors.scss';
 
+.handicraft_container {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 140px;
+    background: radial-gradient(circle, $color-dark-gray, $color-black);
+  }
+
 .handicraft_header {
     margin: 50px 0;
-    text-align: center;
-    font-size: 24px;
     color: $color-white;
 
     &::after {
@@ -25,65 +31,25 @@
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
 
     p {
         width: 495px;
-        text-align: center;
     }
 }
 
-.handicraft_container {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 140px;
-    background: radial-gradient(circle, $color-dark-gray, $color-black);
-  }
-  
-  .handicraft_portfolio {
+.handicraft_portfolio {
     width: 80%;
     margin: 0 auto;
-  }
+  }  
 
-    .slick-slide {
-    position: relative;
-    text-align: center;
-  
-    img {
-      max-width: 100%;
-      max-height: 400px;
-      object-fit: contain;
-      margin: 70px auto;
-    }
-  
-    .handicraft_description {
-      margin-top: 10px;
-      font-size: 1.1rem;
-    }
-  }
-
-  .slick-dots {
-    margin-bottom: 40px;
-  }
-  
-  .custom_arrow_left {
-    left: 10px;
-  }
-  
-  .custom_arrow_right {
-    right: 10px;
-  }
-  
-  .custom_arrow_left:hover,
-  .custom_arrow_right:hover {
-    background-color: $color-dark-gray;
-  }
+.slick-slide img {
+    max-height: 400px;
+    margin: 70px auto;  
+     
+  }    
 
 .modal_image {
-    max-height: 60vh;
-    height: auto;
+    max-height: 400px;
 }
 
 .modal_navigation {

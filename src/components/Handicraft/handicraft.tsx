@@ -38,9 +38,9 @@ const Handicraft: React.FC = () => {
 
   const images = [
     { src: Plates, description: 'Talerze ozdobne' },
-    { src: Plate_1, description: 'Talerz ozdobny 1' },
-    { src: Plate_2, description: 'Talerz ozdobny 2' },
-    { src: Plate_3, description: 'Talerz ozdobny 3' }
+    { src: Plate_1, description: 'Talerz złoto' },
+    { src: Plate_2, description: 'Talerz zegar złoto' },
+    { src: Plate_3, description: 'Talerz zegar' }
   ];
 
   const settings = {
