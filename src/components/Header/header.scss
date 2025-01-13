@@ -30,9 +30,6 @@
 
   nav {
     ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
 
       li {
         display: inline;
@@ -40,7 +37,6 @@
         position: relative;
 
         a {
-          text-decoration: none;
           color: $color-cadet-gray;
           font-size: 18px;
 
@@ -51,14 +47,10 @@
 
         &.dropdown {
           .dropdown_menu {
-            display: none;
             position: absolute;
-            top: 100%;
             left: -20px;
             background-color: $color-mint-cream;
             box-shadow: 0 8px 16px $color-gray;
-            list-style: none;
-            padding: 0;
             margin-top: 5px;
             min-width: 150px;
 
@@ -66,19 +58,13 @@
               a {
                 display: block;
                 padding: 5px 15px;
-                color: $color-cadet-gray;
-                white-space: nowrap;
 
                 &:hover {
                   background-color: $color-cadet-gray;
-                  color: $color-mint-cream;
+                  color: $color-white;
                 }
               }
             }
-          }
-
-          &:hover .dropdown_menu {
-            display: block;
           }
         }
       }
@@ -89,16 +75,12 @@
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding: 20px;
+    height: auto;
+  }
 
-    nav ul {
-      flex-direction: column;
-      align-items: flex-start;
-
-      li {
-        margin: 10px 15px;
-      }
-    }
+  .header nav ul li {
+    margin: 10px 25px;
   }
 }
