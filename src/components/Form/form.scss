@@ -12,7 +12,6 @@
     ),
     url('../../assets/pexels-maksgelatin-5605061.jpg') center/cover no-repeat;
   padding: 40px 20px;
-  color: $color-white; 
 }
 
 .form_header {
@@ -35,7 +34,6 @@
 
 .form_group label {
   display: block;
-  font-size: 16px;
   color: $color-white;
   margin-bottom: 8px;
 }
@@ -60,7 +58,6 @@
 
 .form_textarea {
   height: 120px;
-  resize: none;
 }
 
 .form_submit_button {
@@ -80,5 +77,11 @@
 
   &:active {
     transform: scale(0.98);
+  }
+}
+
+@media (max-width: 768px) {
+  .form_container {
+    max-width: 350px;
   }
 }

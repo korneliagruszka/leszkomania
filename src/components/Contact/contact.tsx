@@ -9,7 +9,7 @@ const Contact: React.FC = () => {
         <br />
         <i className="fa-duotone fa-solid fa-phone"></i> 508 173 845
         <br />
-        <i className="fa-sharp fa-solid fa-envelope"></i> leszek.gruszka@gmail.com
+        <i className="fa-sharp fa-solid fa-envelope"></i> maria.gruszka65@gmail.com
       </p>
     </div>
   );
