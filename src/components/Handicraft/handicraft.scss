@@ -45,7 +45,6 @@
 .slick-slide img {
     max-height: 400px;
     margin: 70px auto;  
-     
   }    
 
 .modal_image {
@@ -62,4 +61,12 @@
     font-size: 24px;
     cursor: pointer;
     padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .slick-slide img {
+    justify-content: center;
+    width: 90%;
+    object-fit: cover;
+  }
 }
