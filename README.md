@@ -10,7 +10,7 @@
 ## General info
 An application containing information and a portfolio of a painter. Through the site you can contact the artist and place your order.
 
-Link to the app: 
+Link to the app: https://leszkomania.vercel.app/.
 
 ## Preview
 ### Main page - Home
