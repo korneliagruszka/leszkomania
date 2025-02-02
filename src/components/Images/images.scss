@@ -114,3 +114,20 @@
 .slick-dots li button:before {
   color: $color-white;
 }
+
+@media (max-width: 768px) {
+  
+  .custom_arrow {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+  }
+
+  .custom_arrow_left {
+    left: -20px;
+  }
+
+  .custom_arrow_right {
+    right: -20px;
+  }
+}
