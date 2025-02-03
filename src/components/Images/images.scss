@@ -50,6 +50,12 @@
       .images_portfolio img {
         max-height: 250px;
       }
+
+      .slick-slide {
+        //border: solid 2px red;
+        min-height: 30px;
+        margin-top: 20px;
+      }
     }
   }  
 
@@ -71,7 +77,7 @@
   
   @media (max-width: 768px) {
     .modal_content {
-      max-width: 430px;
+      max-width: 370px;
     }
   }
 
