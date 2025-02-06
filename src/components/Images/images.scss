@@ -41,10 +41,7 @@
 .images_portfolio {
     width: 70%;
     margin: 0 auto;
-
-    .slick-slide {
-      min-height: 600px;
-    }
+    position: relative;
 
     @media (max-width: 768px) {
       .images_portfolio img {
@@ -52,7 +49,6 @@
       }
 
       .slick-slide {
-        //border: solid 2px red;
         min-height: 30px;
         margin-top: 20px;
       }
@@ -121,13 +117,11 @@
   color: $color-white;
 }
 
-
-
 @media (max-width: 768px) {
   
   .custom_arrow {
     position: absolute;
-    top: 40%;
+    top: 50%;
     transform: translateY(-50%);
   }
 
