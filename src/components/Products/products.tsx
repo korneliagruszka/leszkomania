@@ -12,24 +12,27 @@ const Products: React.FC = () => {
     <div>
       <h2 className="products_header">Poznaj moje prace</h2>
       <div className="products_container">
-        <div className="product_item">
+        {/* 🔥 Dodanie onClick na całym product_item */}
+        <div className="product_item" onClick={() => navigate('/pictures')}>
           <img src={Pictures} alt="Obrazy" />
           <p>Obrazy</p>
-          <button onClick={() => navigate('/pictures')}>
+          <button onClick={(e) => e.stopPropagation()}> {/* Zatrzymanie eventu dla buttona */}
             <i className="fa-solid fa-palette"></i>
           </button>
         </div>
-        <div className="product_item">
+
+        <div className="product_item" onClick={() => navigate('/handicraft')}>
           <img src={Handicraft} alt="Rękodzieło" />
           <p>Rękodzieło</p>
-          <button onClick={() => navigate('/handicraft')}>
+          <button onClick={(e) => e.stopPropagation()}>
             <i className="fa-solid fa-hand-sparkles"></i>
           </button>
         </div>
-        <div className="product_item">
+
+        <div className="product_item" onClick={() => navigate('/renovations')}>
           <img src={Renovations} alt="Renowacje" />
           <p>Renowacje</p>
-          <button onClick={() => navigate('/renovations')}>
+          <button onClick={(e) => e.stopPropagation()}>
             <i className="fa-solid fa-hammer"></i>
           </button>
         </div>
