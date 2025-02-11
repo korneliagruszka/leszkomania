@@ -12,11 +12,10 @@ const Products: React.FC = () => {
     <div>
       <h2 className="products_header">Poznaj moje prace</h2>
       <div className="products_container">
-        {/* 🔥 Dodanie onClick na całym product_item */}
         <div className="product_item" onClick={() => navigate('/pictures')}>
           <img src={Pictures} alt="Obrazy" />
           <p>Obrazy</p>
-          <button onClick={(e) => e.stopPropagation()}> {/* Zatrzymanie eventu dla buttona */}
+          <button onClick={(e) => e.stopPropagation()}>
             <i className="fa-solid fa-palette"></i>
           </button>
         </div>
