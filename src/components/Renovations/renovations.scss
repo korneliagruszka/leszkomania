@@ -87,19 +87,13 @@
 
   @media (max-width: 768px) {
     .renovation_images {
-      flex-direction: column;  /* Ustawia obrazy jeden pod drugim */
+      flex-direction: column;
       align-items: center;
     }
   
     .before,
     .after {
-      width: 100%; /* Obrazy zajmują pełną szerokość */
-      height: auto; /* Automatyczna wysokość, żeby nie były spłaszczone */
-      margin-bottom: 10px; /* Odstęp między obrazami */
-    }
-  
-    .before img,
-    .after img {
-      height: auto; /* Dopasowanie wysokości proporcjonalnie */
+      width: 100%;
+      height: auto;
     }
   }
