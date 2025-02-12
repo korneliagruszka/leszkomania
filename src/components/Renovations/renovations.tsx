@@ -12,17 +12,17 @@ const Renovations: React.FC = () => {
     {
       before: BeforeImageTableTop,
       after: AfterImageTableTop,
-      description: 'Blat stolika'
+      description: ''
     },
     {
       before: BeforeTableDetails,
       after: AfterTableDetails,
-      description: 'Detale stolika'
+      description: ''
     },
     {
       before: BeforeTableLegs,
       after: AfterTableLegs,
-      description: 'Nogi stolika'
+      description: ''
     },
     
   ];
