@@ -101,35 +101,19 @@
     right: 15px;
     font-size: 32px;
     cursor: pointer;
-    color: $color-black;
   }    
 
 .modal_navigation {
     justify-content: space-between;
-    width: 100%;
 }  
-
-.custom_arrow_left {
-  z-index: 10;
-}
 
 .slick-dots li button:before {
   color: $color-white;
 }
 
 @media (max-width: 768px) {
-  
   .custom_arrow {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .custom_arrow_left {
-    left: -20px;
-  }
-
-  .custom_arrow_right {
-    right: -20px;
   }
 }
