@@ -20,7 +20,7 @@ const Products: React.FC = () => {
         <div className="product_item" onClick={() => handleNavigation('/pictures')}>
           <img src={Pictures} alt="Obrazy" />
           <p>Obrazy</p>
-          <button onClick={(e) => e.stopPropagation()}>
+          <button onClick={(e) => {e.stopPropagation(); handleNavigation('/pictures');}}>
             <i className="fa-solid fa-palette"></i>
           </button>
         </div>
@@ -28,7 +28,7 @@ const Products: React.FC = () => {
         <div className="product_item" onClick={() => handleNavigation('/handicraft')}>
           <img src={Handicraft} alt="Rękodzieło" />
           <p>Rękodzieło</p>
-          <button onClick={(e) => e.stopPropagation()}>
+          <button onClick={(e) => {e.stopPropagation(); handleNavigation('/handicraft')}}>
             <i className="fa-solid fa-hand-sparkles"></i>
           </button>
         </div>
@@ -36,7 +36,7 @@ const Products: React.FC = () => {
         <div className="product_item" onClick={() => handleNavigation('/renovations')}>
           <img src={Renovations} alt="Renowacje" />
           <p>Renowacje</p>
-          <button onClick={(e) => e.stopPropagation()}>
+          <button onClick={(e) => {e.stopPropagation(); handleNavigation('/renovations')}}>
             <i className="fa-solid fa-hammer"></i>
           </button>
         </div>
