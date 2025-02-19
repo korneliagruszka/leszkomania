@@ -46,4 +46,4 @@ The project is a ready-made application.
 This application is my own project.
 
 ## Badges
-![Vercel Status](https://img.shields.io/vercel/deploy/leszkomania?style=flat-square)
+![Vercel](https://vercelbadge.vercel.app/leszkomania)
