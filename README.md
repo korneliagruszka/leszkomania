@@ -6,6 +6,7 @@
 * [Technologies](#technologies)
 * [Project status](#project-status)
 * [Sources](#sources)
+* [Badges](#badges)
 
 ## General info
 An application containing information and a portfolio of a painter. Through the site you can contact the artist and place your order.
@@ -43,3 +44,6 @@ The project is a ready-made application.
 
 ## Sources
 This application is my own project.
+
+## Badges
+![](https://img.shields.io/vercel/deploy/leszkomania?style=for-the-badge)
