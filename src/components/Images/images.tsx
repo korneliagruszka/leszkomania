@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 import Slider from "react-slick";
 import './images.scss';
-import Abstraction from '../../assets/image_abstration.jpg';
-import Abstraction_2 from '../../assets/image_abstraction_2.jpg';
-import Abstraction_3 from '../../assets/image_abstraction_3.jpg';
-import Abstraction_4 from '../../assets/image_abstraction_4.jpg';
-import Abstraction_5 from '../../assets/image_abstraction_5.jpg';
-import Abstraction_6 from '../../assets/image_abstraction_6.jpg';
-import Birds from '../../assets/image_birds.jpg';
-import Birds_2 from '../../assets/image_birds_2.jpg';
-import Face from '../../assets/image_face.jpg';
-import Flowers from '../../assets/image_flowers.jpg';
-import Green from '../../assets/image_green.jpg';
-import Red from '../../assets/image_red.jpg';
+import Abstraction from '../../assets/IMG_1060.jpg';
+import Abstraction_2 from '../../assets/IMG_1062.jpg';
+import Abstraction_3 from '../../assets/IMG_1074.jpg';
+import Abstraction_4 from '../../assets/IMG_1075.jpg';
+import Abstraction_5 from '../../assets/IMG_1069.jpg';
+import Abstraction_6 from '../../assets/IMG_1063.jpg';
+import Birds from '../../assets/IMG_1065.jpg';
+import Birds_2 from '../../assets/IMG_1066.jpg';
+import Face from '../../assets/IMG_1064.jpg';
+import Flowers from '../../assets/IMG_1076.jpg';
+import Green from '../../assets/IMG_1067.jpg';
+import Red from '../../assets/IMG_1077.jpg';
+import Gold from '../../assets/IMG_1071.jpg';
 
 // Komponent strzałki lewej
 const PreviousArrow = (props: any) => {
@@ -46,18 +47,19 @@ const Images: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
   
     const images = [
-      { src: Abstraction, description: '"Apokalipsa"' },
-      { src: Abstraction_2, description: '"Czerwie"' },
-      { src: Abstraction_3, description: '"Pustynia"' },
-      { src: Abstraction_4, description: '"Modernizm"' },
-      { src: Abstraction_5, description: '"Biel"' },
-      { src: Abstraction_6, description: '"Drzewo"' },
-      { src: Birds, description: '"Pawie"' },
-      { src: Birds_2, description: '"Paw"' },
-      { src: Face, description: '"Twarz"' },
-      { src: Flowers, description: '"Kwiaty"' },
-      { src: Green, description: '"Wiosna"' },
-      { src: Red, description: '"Jesień"' }
+      { src: Abstraction, description: 'Apokalipsa' },
+      { src: Abstraction_2, description: 'Czerwie' },
+      { src: Abstraction_3, description: 'Pustynia' },
+      { src: Abstraction_4, description: 'Modernizm' },
+      { src: Abstraction_5, description: 'Kwiaty' },
+      { src: Abstraction_6, description: 'Drzewo' },
+      { src: Birds, description: 'Pawie' },
+      { src: Birds_2, description: 'Paw' },
+      { src: Face, description: 'Twarz' },
+      { src: Flowers, description: 'Kwiaty' },
+      { src: Green, description: 'Wiosna' },
+      { src: Red, description: 'Jesień' },
+      { src: Gold, description: 'Promienie'},
     ];
 
   const settings = {

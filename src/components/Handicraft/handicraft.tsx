@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import Slider from 'react-slick';
 import './handicraft.scss';
-import Plates from '../../assets/decorative_plates.jpg';
-import Plate_1 from '../../assets/decoratove_plate_1.jpg';
-import Plate_2 from '../../assets/decoratove_plate_2.jpg';
-import Plate_3 from '../../assets/decoratove_plate_3.jpg';
+import Dagger from '../../assets/IMG_1078.jpg';
+import Dagger_2 from '../../assets/IMG_1079.jpg'
+import Plate_2 from '../../assets/IMG_1072.jpg';
+import Plate_3 from '../../assets/IMG_1073.jpg';
 
 const PreviousArrow = (props: any) => {
   const { className, style, onClick } = props;
@@ -37,10 +37,10 @@ const Handicraft: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const images = [
-    { src: Plates, description: 'Talerze ozdobne' },
-    { src: Plate_1, description: 'Talerz złoto' },
-    { src: Plate_2, description: 'Talerz zegar złoto' },
-    { src: Plate_3, description: 'Talerz zegar' }
+    { src: Dagger, description: 'Sztylet przód'},
+    { src: Dagger_2, description: 'Sztylet tył'},
+    { src: Plate_2, description: 'Talerz zegar' },
+    { src: Plate_3, description: 'Talerz złoty' }
   ];
 
   const settings = {
