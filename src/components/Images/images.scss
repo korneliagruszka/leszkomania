@@ -55,6 +55,34 @@
     }
   }  
 
+  .slick-prev {
+    left: 290px;
+  }
+  
+  .slick-next {
+    right: 290px;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 24px;
+  }
+  
+  @media (max-width: 768px) {
+    .slick-prev {
+      left: 1px;
+    }
+    
+    .slick-next {
+      right: 1px;
+    }
+  
+    .slick-prev:before,
+    .slick-next:before {
+      font-size: 20px;
+    }
+  }
+
 .modal {
     position: fixed;
     top: 0;
