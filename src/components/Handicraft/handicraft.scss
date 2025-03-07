@@ -47,6 +47,14 @@
     margin: 70px auto;  
   }    
 
+.custom_arrow_left_handicraft {
+  left: 350px;
+}
+
+.custom_arrow_right_handicraft {
+  right: 350px;
+}
+
 .modal_image {
     max-height: 400px;
 }
@@ -75,5 +83,13 @@
     height: auto; 
     max-height: 250px; 
     object-fit: contain;
+  }
+
+  .custom_arrow_left_handicraft {
+    left: 10px;
+  }
+
+  .custom_arrow_right_handicraft {
+    right: 10px;
   }
 }
