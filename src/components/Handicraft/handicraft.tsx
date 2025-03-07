@@ -10,7 +10,7 @@ const PreviousArrow = (props: any) => {
   const { className, style, onClick } = props;
   return (
     <div
-      className={`${className} custom_arrow_left`}
+      className={`${className} custom_arrow_left_handicraft`}
       style={{ ...style, display: 'block' }}
       onClick={onClick}
     >
@@ -23,7 +23,7 @@ const NextArrow = (props: any) => {
   const { className, style, onClick } = props;
   return (
     <div
-      className={`${className} custom_arrow_right`}
+      className={`${className} custom_arrow_right_handicraft`}
       style={{ ...style, display: 'block' }}
       onClick={onClick}
     >
