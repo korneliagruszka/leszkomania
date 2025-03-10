@@ -72,7 +72,6 @@ const Images: React.FC = () => {
     autoplaySpeed: 3000, 
     nextArrow: <NextArrow />, 
     prevArrow: <PreviousArrow />
-    //pauseOnHover: true,
   };
 
   // Funkcja otwierająca modal na danym indeksie obrazu
