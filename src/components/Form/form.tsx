@@ -4,9 +4,34 @@ import React, { FC, useState } from 'react';
 const Form: FC = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [emailError, setEmailError] = useState('');
+  const [messageError, setMessageError] = useState('');
+
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Resetowanie błędów
+    setEmailError('');
+    setMessageError('');
+
+    let isValid = true;
+
+    if (!validateEmail(email)) {
+      setEmailError('Email nieprawidłowy');
+      isValid = false;
+    }
+
+    if (message.trim() === '') {
+      setMessageError('Wpisz treść wiadomości');
+      isValid = false;
+    }
+
+    if (!isValid) return;
 
     try {
       const response = await fetch('http://localhost:5000/send-email', {
@@ -19,7 +44,7 @@ const Form: FC = () => {
 
       if (response.ok) {
         alert('Wiadomość wysłana pomyślnie!');
-        setEmail(''); // Czyszczenie pól formularza
+        setEmail('');
         setMessage('');
       } else {
         alert('Wystąpił błąd podczas wysyłania wiadomości.');
@@ -42,11 +67,12 @@ const Form: FC = () => {
             name="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="form_input"
+            className={`form_input ${emailError ? 'error' : ''}`}
             placeholder="Wpisz swój adres email"
-            required
           />
+          {emailError && <p className="error_message">{emailError}</p>}
         </div>
+
         <div className="form_group">
           <label htmlFor="message">Wiadomość do autora:</label>
           <textarea
@@ -54,11 +80,12 @@ const Form: FC = () => {
             name="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="form_textarea"
+            className={`form_textarea ${messageError ? 'error' : ''}`}
             placeholder="Wpisz swoją wiadomość"
-            required
           />
+          {messageError && <p className="error_message">{messageError}</p>}
         </div>
+
         <button type="submit" className="form_submit_button">
           Wyślij
         </button>
