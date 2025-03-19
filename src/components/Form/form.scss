@@ -1,4 +1,3 @@
-//konieczność
 @import '../../style/colors.scss';
 
 .form_section {
@@ -79,6 +78,16 @@
   &:active {
     transform: scale(0.98);
   }
+}
+
+.error {
+  border: 2px solid red;
+}
+
+.error_message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 @media (max-width: 768px) {
