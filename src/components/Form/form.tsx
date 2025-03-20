@@ -6,6 +6,7 @@ const Form: FC = () => {
   const [message, setMessage] = useState('');
   const [emailError, setEmailError] = useState('');
   const [messageError, setMessageError] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
 
   const validateEmail = (email: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -18,6 +19,7 @@ const Form: FC = () => {
     // Resetowanie błędów
     setEmailError('');
     setMessageError('');
+    setSuccessMessage('');
 
     let isValid = true;
 
@@ -43,9 +45,12 @@ const Form: FC = () => {
       });
 
       if (response.ok) {
-        alert('Wiadomość wysłana pomyślnie!');
+        setSuccessMessage('Dziękuję za wiadomość! 🎉');
         setEmail('');
         setMessage('');
+
+        // Ukrycie wiadomości po 5 sekundach
+        setTimeout(() => setSuccessMessage(''), 5000);
       } else {
         alert('Wystąpił błąd podczas wysyłania wiadomości.');
       }
@@ -62,7 +67,7 @@ const Form: FC = () => {
         <div className="form_group">
           <label htmlFor="email">Email:</label>
           <input
-            type="email"
+            type="text"
             id="email"
             name="email"
             value={email}
@@ -89,6 +94,8 @@ const Form: FC = () => {
         <button type="submit" className="form_submit_button">
           Wyślij
         </button>
+
+        {successMessage && <p className="success_message">{successMessage}</p>}
       </form>
     </div>
   );
