@@ -1,12 +1,19 @@
-import './form.scss';
-import React, { FC, useState } from 'react';
+/**
+ * Form Component
+ *
+ * This component renders a contact form where users can send messages to the artist.
+ * It includes validation for email and message fields and displays success or error messages.
+ */
+
+import "./form.scss";
+import React, { FC, useState } from "react";
 
 const Form: FC = () => {
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [emailError, setEmailError] = useState('');
-  const [messageError, setMessageError] = useState('');
-  const [successMessage, setSuccessMessage] = useState('');
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [messageError, setMessageError] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
 
   const validateEmail = (email: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -17,46 +24,46 @@ const Form: FC = () => {
     e.preventDefault();
 
     // Resetowanie błędów
-    setEmailError('');
-    setMessageError('');
-    setSuccessMessage('');
+    setEmailError("");
+    setMessageError("");
+    setSuccessMessage("");
 
     let isValid = true;
 
     if (!validateEmail(email)) {
-      setEmailError('Email nieprawidłowy');
+      setEmailError("Email nieprawidłowy");
       isValid = false;
     }
 
-    if (message.trim() === '') {
-      setMessageError('Wpisz treść wiadomości');
+    if (message.trim() === "") {
+      setMessageError("Wpisz treść wiadomości");
       isValid = false;
     }
 
     if (!isValid) return;
 
     try {
-      const response = await fetch('http://localhost:5000/send-email', {
-        method: 'POST',
+      const response = await fetch("http://localhost:5000/send-email", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ email, message }),
       });
 
       if (response.ok) {
-        setSuccessMessage('Dziękuję za wiadomość! 🎉');
-        setEmail('');
-        setMessage('');
+        setSuccessMessage("Dziękuję za wiadomość! 🎉");
+        setEmail("");
+        setMessage("");
 
         // Ukrycie wiadomości po 5 sekundach
-        setTimeout(() => setSuccessMessage(''), 5000);
+        setTimeout(() => setSuccessMessage(""), 5000);
       } else {
-        alert('Wystąpił błąd podczas wysyłania wiadomości.');
+        alert("Wystąpił błąd podczas wysyłania wiadomości.");
       }
     } catch (error) {
-      console.error('Błąd:', error);
-      alert('Wystąpił błąd. Spróbuj ponownie.');
+      console.error("Błąd:", error);
+      alert("Wystąpił błąd. Spróbuj ponownie.");
     }
   };
 
@@ -72,7 +79,7 @@ const Form: FC = () => {
             name="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className={`form_input ${emailError ? 'error' : ''}`}
+            className={`form_input ${emailError ? "error" : ""}`}
             placeholder="Wpisz swój adres email"
           />
           {emailError && <p className="error_message">{emailError}</p>}
@@ -85,7 +92,7 @@ const Form: FC = () => {
             name="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className={`form_textarea ${messageError ? 'error' : ''}`}
+            className={`form_textarea ${messageError ? "error" : ""}`}
             placeholder="Wpisz swoją wiadomość"
           />
           {messageError && <p className="error_message">{messageError}</p>}
